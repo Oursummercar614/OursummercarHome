@@ -3,134 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our summer car</title>
+    <title>My Summer Car Online</title>
     <style>
         body {
+            background-color: #1a2525;
+            color: #fff;
             font-family: Arial, sans-serif;
-            background-color: #1a1a1a;
-            color: #ccc;
             margin: 0;
             padding: 0;
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFUlEQVQYV2NkYGD4z8DAwMowMTS8uY0AQL4AKxE8Z0bW3AAAAAElFTkSuQmCC');
+            background-repeat: repeat;
         }
-        .container {
-            display: flex;
-            max-width: 1200px;
-            margin: 0 auto;
-            display: none; /* Hidden until loading ends */
-            opacity: 0;
-            transition: opacity 1s ease;
+        nav {
+            background-color: #000;
+            padding: 10px;
+            text-align: center;
         }
-        .main-content {
-            flex: 3;
-            padding: 20px;
-        }
-        .sidebar {
-            flex: 1;
-            background-color: #2a2a2a;
-            padding: 20px;
-        }
-        h1 {
+        nav a {
             color: #fff;
-            font-size: 2.5em;
-        }
-        h2 {
-            color: #f60;
-        }
-        a {
-            color: #f60;
+            margin: 0 15px;
             text-decoration: none;
         }
-        a:hover {
-            text-decoration: underline;
+        .header {
+            text-align: center;
+            padding: 20px;
         }
-        ul {
-            list-style-type: none;
-            padding: 0;
+        .content {
+            text-align: center;
+            padding: 20px;
         }
-
-        /* Loading screen styles */
-        #loading-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #000;
+        .buttons {
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
-            z-index: 9999;
+            gap: 20px;
+            margin-top: 20px;
         }
-
-        #loading-logo {
-            width: 150px;
-            margin-bottom: 20px;
+        .button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
         }
-
-        .spinner {
-            border: 8px solid #333;
-            border-top: 8px solid #f60;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            animation: spin 1s linear infinite;
+        .social {
+            text-align: center;
+            padding: 20px;
         }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        .social a {
+            margin: 0 10px;
+            color: #fff;
         }
     </style>
 </head>
 <body>
-
-    <!-- Loading Screen -->
-    <div id="loading-screen">
-        <img src="your-logo.png" alt="Logo" id="loading-logo">
-        <div class="spinner"></div>
+    <nav>
+        <a href="#">HOME</a>
+        <a href="#">PRE-ORDER</a>
+        <a href="#">DOWNLOAD</a>
+        <a href="#">CHANGELOG</a>
+        <a href="#">ACCOUNT</a>
+    </nav>
+    <div class="header">
+        <h1>My Summer Car Online</h1>
+        <p>MSCO is a modification for My Summer Car that lets you play multiplayer with your friends through Steam</p>
+        <a href="#" class="button">Download MSCO</a>
     </div>
-
-    <!-- Main Page Content -->
-    <div class="container" id="main-content">
-        <div class="main-content">
-            <h1>Our summer car</h1>
-            <p>Saturday, May 17 2025</p>
-            <h2>Hello!</h2>
-            <p>Here you can see the Changelogs , And download the multiplayer mod.</p>
-            <h2>Short info about the project</h2>
-            <p>So project started on March 2025. The plan for release is to have cooperative style FP2 multiplayer with full world sync, that means each element of the game will be synchronized and both players will see the same world.
-            I'm designing the net code to be eventually expand to support more players in future but as for now the focus is 2 players online.</p>
-            <p>If you want to follow with the team members and other project fans join official project discord. You can also hit follow button on my twitch channel where I stream development of the mod, subscribe to my youtube channel where I post videos from the development and of course hit like on projects facebook fanpage.</p>
-            <h2>Any question?</h2>
-            <p>If you have any question first of all make sure you read FAQ: <br>
-            English: <a href="https://oursummercar614.github.io/Oursummercar-FAQ/">https://oursummercar614.github.io/Oursummercar-FAQ/</a></p>
-            <p>If it's not answering your question you can contact me both in comments and on official project's discord.</p>
-            <p>Nyross. <br> </p>
-        </div>
-        <div class="sidebar">
-            <h3>Pages</h3>
-            <ul>
-                <li><a href="https://oursummercar614.github.io/OursummercarHome/">Home</a></li>
-                <li><a href="https://oursummercar614.github.io/Oursummercar-FAQ/">English FAQ</a></li>
-                <li><a href="https://oursummercar614.github.io/Oursummercardownloadpage/">Early Access Download</a></li>
-            </ul>
+    <div class="content">
+        <div class="buttons">
+            <div>
+                <span>⏳</span>
+                <p>MSCO in Active Development since 2023</p>
+            </div>
+            <div>
+                <span>🏁</span>
+                <p>Fully Functional My Summer Car Multiplayer</p>
+            </div>
+            <div>
+                <span>⬇️</span>
+                <p>Closed Beta Available for Purchase</p>
+            </div>
         </div>
     </div>
-
-    <script>
-        window.onload = function () {
-            setTimeout(function () {
-                // Hide loading screen
-                document.getElementById('loading-screen').style.display = 'none';
-                // Show content and fade it in
-                const content = document.getElementById('main-content');
-                content.style.display = 'flex';
-                setTimeout(() => {
-                    content.style.opacity = 1;
-                }, 100);
-            }, 3000);
-        };
-    </script>
+    <div class="social">
+        <p>Connect socially with MSCO</p>
+        <a href="#">Discord</a>
+        <a href="#">Twitter</a>
+        <a href="#">YouTube</a>
+    </div>
 </body>
 </html>
